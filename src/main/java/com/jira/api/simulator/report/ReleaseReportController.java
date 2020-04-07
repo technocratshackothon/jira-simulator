@@ -16,6 +16,7 @@ public class ReleaseReportController {
 
 	@Autowired
 	private ReleaseDetailsService releaseDetailsService;
+	@Autowired
 	private ProjectReleaseAvailableSupportService support;
 	
 	@RequestMapping("/releasedetail/{projectname}/{releaseversion}")

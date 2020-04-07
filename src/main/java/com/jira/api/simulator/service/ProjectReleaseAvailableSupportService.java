@@ -1,5 +1,7 @@
 package com.jira.api.simulator.service;
 
+import org.springframework.stereotype.Service;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class ProjectReleaseAvailableSupportService {
 
 	//private static final String FILEPATH_AVAILABLE_PROEJCT_RELEASE_DATA = "";
