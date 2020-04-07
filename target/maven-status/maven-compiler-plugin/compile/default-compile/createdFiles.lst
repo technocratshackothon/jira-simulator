@@ -1,0 +1,11 @@
+com\jira\api\simulator\values\Priority.class
+com\jira\api\simulator\entity\ReleaseReport.class
+com\jira\api\simulator\values\Status.class
+com\jira\api\simulator\values\Points.class
+com\jira\api\simulator\entity\Story.class
+com\jira\api\simulator\values\Severity.class
+com\jira\api\simulator\report\ReleaseReportController.class
+com\jira\api\simulator\JiraSimulatorApplication.class
+com\jira\api\simulator\service\ReleaseDetailsService.class
+com\jira\api\simulator\entity\Defect.class
+com\jira\api\simulator\service\ProjectReleaseAvailableSupportService.class
