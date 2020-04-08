@@ -29,9 +29,9 @@ public class ReleaseReportController {
 		return support.getSupportedProjects();
 	}
 	
-	@RequestMapping("/releasesupport/{projectname}")
-	public List<String> getSupportedRelease(@PathVariable String projectName){
-		return support.getSupportedRelease(projectName);
+	@RequestMapping("/releasesupport/{projectname}") 
+	public List<String> getSupportedRelease(@PathVariable String projectname){
+		return support.getSupportedRelease(projectname);
 	}
 	
 }
