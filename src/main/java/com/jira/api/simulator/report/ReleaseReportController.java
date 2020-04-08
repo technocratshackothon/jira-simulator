@@ -31,7 +31,6 @@ public class ReleaseReportController {
 	
 	@RequestMapping("/releasesupport/{projectname}")
 	public List<String> getSupportedRelease(@PathVariable String projectName){
-		support = new ProjectReleaseAvailableSupportService();
 		return support.getSupportedRelease(projectName);
 	}
 	

@@ -7,14 +7,12 @@ public class ReleaseReport {
 	String projectName;
 	String version;
 	List<Story> storyList;
-	List<Defect> defectList;
 	
-	public ReleaseReport(String projectName, String version, List<Story> storyList, List<Defect> defectList) {
+	public ReleaseReport(String projectName, String version, List<Story> storyList) {
 		super();
 		this.projectName = projectName;
 		this.version = version;
 		this.storyList = storyList;
-		this.defectList = defectList;
 	}
 
 	public String getProjectName() {
@@ -40,13 +38,4 @@ public class ReleaseReport {
 	public void setStoryList(List<Story> storyList) {
 		this.storyList = storyList;
 	}
-
-	public List<Defect> getDefectList() {
-		return defectList;
-	}
-
-	public void setDefectList(List<Defect> defectList) {
-		this.defectList = defectList;
-	}
-	
 }

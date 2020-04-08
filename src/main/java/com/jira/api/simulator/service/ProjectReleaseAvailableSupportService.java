@@ -15,39 +15,23 @@ import java.util.Map;
 @Service
 public class ProjectReleaseAvailableSupportService {
 
-	//private static final String FILEPATH_AVAILABLE_PROEJCT_RELEASE_DATA = "";
-	private final Map<String, List<String>> supportMap;
-	
-	public ProjectReleaseAvailableSupportService(){
-		this.supportMap = new HashMap<String, List<String>>();
-		loadSupportMap();
-	}
-	
-	private void loadSupportMap() {
-		System.out.println("Executing loadSupportMap method");
-		ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-		InputStream is = classloader.getResourceAsStream("/project_release_support.txt");
-		
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
-	        while (reader.ready()) {
-	            String line = reader.readLine();
-	            System.out.println(line);
-	        }
-	    }catch (FileNotFoundException e) {
-	        e.printStackTrace();
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-		
-		
-		
-	}
-
 	public List<String> getSupportedProjects(){
 		return Arrays.asList("CAI","DMSP","FDP");
 	}
 	
 	public List<String> getSupportedRelease(String projectName){
-		return null;
+		
+		if(projectName.equalsIgnoreCase("CAI"))
+		{
+		return Arrays.asList("april_2020_01","april_2020_02","april_2020_03","april_2020_04");
+		} else if (projectName.equalsIgnoreCase("DMSP"))
+		{
+		return Arrays.asList("april_2020_01","april_2020_02");
+		} else if (projectName.equalsIgnoreCase("FDP"))
+		{
+		return Arrays.asList("march_2020_01","june_2020_02","september_2020_03","december_2020_04");
+		} else {
+			throw new UnsupportedOperationException();
+		}
 	}
 }
