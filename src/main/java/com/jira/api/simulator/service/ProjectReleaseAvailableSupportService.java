@@ -1,8 +1,8 @@
 package com.jira.api.simulator.service;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
+import com.jira.api.simulator.entity.Application;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,7 +11,25 @@ public class ProjectReleaseAvailableSupportService {
 	public List<String> getSupportedProjects(){
 		return Arrays.asList("CAI","DMSP","FDP");
 	}
-	
+
+	public List<Application> getSupportedProjectsAndReleasemMap(){
+		List<Application> applicationList = new ArrayList<>();
+		Arrays.asList("CAI","DMSP","FDP").forEach(t->{
+			List<Map<String,String>> releasesAvailable = new ArrayList<>();
+			Application a = new Application();
+			a.setName(t);
+			getSupportedRelease(t).forEach(release->{
+				Map<String,String> mapper = new HashMap<>();
+				mapper.put("releaseName",release);
+				releasesAvailable.add(mapper);
+			});
+			a.setReleasesAvailable(releasesAvailable);
+			applicationList.add(a);
+
+		});
+		return applicationList;
+	}
+
 	public List<String> getSupportedRelease(String projectName){
 		
 		if(projectName.equalsIgnoreCase("CAI"))

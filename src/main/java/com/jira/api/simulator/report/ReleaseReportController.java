@@ -2,6 +2,7 @@ package com.jira.api.simulator.report;
 
 import java.util.List;
 
+import com.jira.api.simulator.entity.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,8 +26,8 @@ public class ReleaseReportController {
 	}
 	
 	@RequestMapping("/projectsupport")
-	public List<String> getSupportedProject(){
-		return support.getSupportedProjects();
+	public List<Application> getSupportedProject(){
+		return support.getSupportedProjectsAndReleasemMap();
 	}
 	
 	@RequestMapping("/releasesupport/{projectname}") 
