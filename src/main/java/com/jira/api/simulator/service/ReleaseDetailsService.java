@@ -120,14 +120,14 @@ public class ReleaseDetailsService {
 					);
 		} else if (projectName.equalsIgnoreCase("CAI") && releaseVersion.equalsIgnoreCase("april_2020_04")) {
 			return Arrays.asList(
-					new Story("ONEFDP-6574", Status.OPEN, Points.FIVE.getPoints(),
+					new Story("ONEFDP-6574", Status.CLOSED, Points.FIVE.getPoints(),
 							Arrays.asList
 						   (new Defect("ONEFDP-9234", CLOSED, MEDIUM, P1, THIRTEEN.getPoints()),
 							new Defect("ONEFDP-9364", CLOSED, HIGH, P2, TWO.getPoints()),
 							new Defect("ONEFDP-9234", CLOSED, MEDIUM, P1,THIRTEEN.getPoints()),
 							new Defect("ONEFDP-9964", CLOSED, HIGH, P3, THREE.getPoints()),
 							new Defect("ONEFDP-9344", CLOSED, LOW, P1, EIGHT.getPoints()),
-							new Defect("ONEFDP-9664", OPEN, LOW, P3, ONE.getPoints())
+							new Defect("ONEFDP-9664", CLOSED, LOW, P3, ONE.getPoints())
 							),
 							Arrays.asList
 							(new TestCase("ONEFDP-9999", PASSED), new TestCase("ONEFDP-9999", PASSED),
